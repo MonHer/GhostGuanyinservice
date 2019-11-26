@@ -6,15 +6,9 @@
 
 language: python
 python:
-  - 3.6
-  - 3.7
   - 3.8
 matrix:
-  include: # Required for Python 3.6+
-    - python: 3.6
-      dist: xenial
-    - python: 3.7
-      dist: xenial
+  include: # Required for Python 3.8+
     - python: 3.8
       dist: xenial
 install:
