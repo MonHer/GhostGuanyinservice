@@ -14,7 +14,7 @@ matrix:
 install:
   - pip install poetry
 script:
-  - poetry run coverage run Application\Orderservice.py
-  - poetry run coverage report -m
+  - poetry run coverage run --source=Application Orderservice.py
+  - poetry run coverage report
 after_success:
   - poetry run coveralls
