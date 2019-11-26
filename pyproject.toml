@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "ghostguanyinservice"
+version = "0.1.0"
+description = "Learn to develop server-side interfaces using python"
+authors = ["GhostGuanyin <40558379+MonHer@users.noreply.github.com>"]
+license = "apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+flask = "^1.1"
+
+[tool.poetry.dev-dependencies]
+coverage = "^4.5"
+coveralls = "^1.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
