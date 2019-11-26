@@ -4,17 +4,30 @@
 #@Author :GhostGuanyin
 #@File   :.travis.yml
 
-language: python
-python:
-  - 3.8
-matrix:
-  include: # Required for Python 3.8+
-    - python: 3.8
-      dist: xenial
-install:
-  - pip install poetry
-script:
-  - poetry run coverage run --source=Application
-  - poetry run coverage report -m
-after_success:
-  - poetry run coveralls
+{
+  "os": [
+    "linux"
+  ],
+  "jobs": {
+    "include": [
+      {
+        "dist": "xenial",
+        "python": "3.8"
+      }
+    ]
+  },
+  "python": [
+    "3.8"
+  ],
+  "script": [
+    "poetry run coverage run --source=Application",
+    "poetry run coverage report -m"
+  ],
+  "install": [
+    "pip install poetry"
+  ],
+  "language": "python",
+  "after_success": [
+    "poetry run coveralls"
+  ]
+}
