@@ -19,7 +19,6 @@ matrix:
       dist: xenial
 install:
   - pip install poetry
-  - poetry install -vvv
 script:
   - poetry run coverage run --source=Application
   - poetry run coverage report -m
