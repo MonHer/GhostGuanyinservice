@@ -20,7 +20,7 @@
     "3.8"
   ],
   "script": [
-    "poetry run coverage run --source=Application",
+    "poetry run coverage run --source=Application\Orderservice.py",
     "poetry run coverage report -m"
   ],
   "install": [
